@@ -1,0 +1,18 @@
+*{
+    text-align: center;
+    background-color: aquamarine;
+    color: rgba(82, 82, 82, 0.841);
+}
+
+.alphabet{
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+    border-color: white;
+    color: rgb(103, 204, 170);
+    width: 2rem;
+    height: 2.3rem;
+}
+
+
+
