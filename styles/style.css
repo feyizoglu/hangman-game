@@ -1,20 +1,36 @@
-*{
-    text-align: center;
-    background-color: aquamarine;
-    color: rgba(82, 82, 82, 0.841);
+* {
+  text-align: center;
+  background-color: aquamarine;
+  color: rgba(82, 82, 82, 0.841);
 }
 
-.alphabet{
-    border-radius: 5px;
-    background: rgb(255, 255, 255);
-    padding: 10px;
-    border-color: white;
-    color: rgb(103, 204, 170);
-    width: 2rem;
-    height: 2.3rem;
+.alphabet {
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  border-color: white;
+  color: rgb(103, 204, 170);
+  width: 2rem;
+  height: 2.3rem;
+}
+.disable {
+  border-radius: 5px;
+  background: rgb(26, 25, 25);
+  padding: 10px;
+  color: rgb(103, 204, 170);
+  width: 2rem;
+  height: 2.3rem;
 }
 .display {
-    font-size: 5rem;
+  font-size: 5rem;
 }
+.game-btns {
+  margin-top: 1rem;
+  border-radius: 5px;
+  background: rgb(255, 255, 255);
 
-
+  border-color: white;
+  color: rgb(103, 204, 170);
+  width: 4rem;
+  height: 3rem;
+}
