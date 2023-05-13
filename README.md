@@ -1,4 +1,8 @@
+You can reach to live project : https://feyizoglu.github.io/hangman-game/
+
 # Create a hangman game
+
+
 
 ## Overview
 Create a hangman game! <br>
