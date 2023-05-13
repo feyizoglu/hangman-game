@@ -16,11 +16,20 @@ let count = 0;
 let newWord;
 let secretWord;
 
+const canvas = document.querySelector("#canvas");
+const context = canvas.getContext("2d");
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+context.strokeStyle = "black";
+context.strokeRect(220, 100, 300, 300);
+// Clear the canvas
+context.clearRect(0, 0, canvas.width, canvas.height);
+
 //Starting the game
 start.addEventListener("click", print);
 function print() {
   getSecret().then((word) => {
-    console.log(word);
+    // console.log(word);
     secretWord = word;
     display = [];
     dis.innerHTML = "";
@@ -39,9 +48,11 @@ function print() {
     for (let i = 0; i < newWord.length; i++) {
       display[i] = "_ ";
     }
-    // if (!dis.innerHTML) {
     dis.innerHTML = display.join("");
-    // }
+    context.strokeStyle = "black";
+    context.strokeRect(220, 100, 300, 300);
+    // Clear the canvas
+    context.clearRect(0, 0, canvas.width, canvas.height);
   });
 }
 
@@ -78,5 +89,68 @@ function letterGuess(e) {
         buttons[i].disabled = true;
       }
     }
+  }
+
+  //Canvas Part
+
+  if (guess == 9) {
+    //   //Bottom Line
+    context.beginPath();
+    context.moveTo(250, 350);
+    context.lineTo(490, 350);
+    context.stroke();
+  }
+
+  if (guess == 8) {
+    context.moveTo(300, 350);
+    context.lineTo(300, 150);
+    context.stroke();
+  }
+  if (guess == 7) {
+    context.moveTo(380, 150);
+    context.lineTo(300, 150);
+    context.stroke();
+  }
+  if (guess == 6) {
+    context.moveTo(380, 150);
+    context.lineTo(380, 180);
+    context.stroke();
+  }
+  if (guess == 5) {
+    // Head;
+    context.beginPath();
+    context.arc(380, 200, 20, 0, 2 * Math.PI);
+    context.stroke();
+    context.moveTo(380, 280);
+    context.lineTo(380, 220);
+    context.stroke();
+  }
+  if (guess == 4) {
+    // Left leg
+    context.beginPath();
+    context.moveTo(380, 280);
+    context.lineTo(360, 330);
+    context.stroke();
+  }
+  if (guess == 3) {
+    // Right leg
+    context.beginPath();
+    context.moveTo(380, 280);
+    context.lineTo(400, 330);
+    context.stroke();
+  }
+  if (guess == 2) {
+    //   // Left arm
+    context.beginPath();
+    context.moveTo(380, 240);
+    context.lineTo(360, 280);
+    context.stroke();
+  }
+  if (guess <= 1) {
+    // Right arm
+    context.beginPath();
+    context.moveTo(380, 240);
+    context.lineTo(400, 280);
+    context.stroke();
   }
 }
